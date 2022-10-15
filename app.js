@@ -7,7 +7,18 @@ const app = Vue.createApp({
     data() {
         return {
             quote: "I'm Spiderman",
-            autor: "Peter Parker"
+            author: "Peter Parker"
+        }
+    },
+    methods: {
+        changeQuote() {
+            console.log('Hola Mundo')
+            this.author = 'Bruce Wayne'
+
+            this.capitalize()
+        },
+        capitalize() {
+            this.quote = this.quote.toUpperCase()
         }
     },
 
