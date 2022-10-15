@@ -13,7 +13,17 @@ const app = Vue.createApp({
 
     data() {
         return {
-            quotes
+            quotes,
+            newQuote: 'Hola mundo'
+        }
+    },
+    methods: {
+        addQuote(event) {
+            console.log(event)
+
+            this.quotes.unshift({
+                quote: this.newQuote
+            })
         }
     }
 

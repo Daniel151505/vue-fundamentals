@@ -8,7 +8,15 @@
 
     <!-- Control absoluto de este DIV-->
     <div id="myApp">
-        <h1> Batman quotes </h1>
+        <h1> Batman quotes <small> {{ newQuote }} </small> </h1>
+
+        <input
+          type="text"
+          v-model="newQuote"
+          v-on:keypress="adddQuote"
+        >
+
+        <hr>
 
         <ul  >
             <li v-for="({ quote, author }, index) in quotes"> 
